@@ -11,9 +11,16 @@ These tasks cover a diverse range of text genres (biomedical literature and clin
 
 | Corpus          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
-| CMedNER          |    |    |   | Name Entity Recognition    | F1             | Clinical   |
-
-
+| CEMRNER*        |    |    |   | Name Entity Recognition    | F1             | Clinical   |
+| CMedQANER          |    |    |   | Name Entity Recognition    | F1             | Medical   |
+| CMedQQMatch*        |    |    |   | Sentence Similarity    | F1             | Medical   |
+| CMedQAMatch        |    |    |   | Sentence Similarity    | F1             | Medical   |
+| CMedQSAMatch        |    |    |   | Sentence Similarity    | F1             |Medical    |
+| CMedQR       |    |    |   |     |        MSE      | Medical   |
+| CMedQC       |    |    |   |     |       F1       | Medical   |
+| CMedSQC*       |    |    |   |     |       F1       | Medical   |
+| CMedBaikeC       |    |    |   |     |      F1        | Medical   |
+* Those dataset are not publicy avaible now because of privcy issues and will be released as soon as possible. 
 
 ### Sentence similarity
  
@@ -40,7 +47,7 @@ All datasets can be downloaded at []()
 
 ### Pretrained Model
 
-All datasets can be downloaded at [C-BERT](). 
+All pretrained model can be downloaded at [C-BERT](). 
 
 ## Baselines
 
