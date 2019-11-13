@@ -1,11 +1,11 @@
 # ChineseBLUE, the Chinese Biomedical Language Understanding Evaluation benchmark
  
+Work in progress
 
 ## Introduction
 
-Chinesse BLUE benchmark consists of five different biomedicine text-mining tasks with ten corpora.
-Here, we rely on preexisting datasets because they have been widely used by the BioNLP community as shared tasks.
-These tasks cover a diverse range of text genres (biomedical literature and clinical notes), dataset sizes, and degrees of difficulty and, more importantly, highlight common biomedicine text-mining challenges.
+Chinesse BLUE benchmark consists of  different biomedicine text-mining tasks with  corpora.
+These tasks cover a diverse range of text genres (biomedical web data and clinical notes), dataset sizes, and degrees of difficulty and, more importantly, highlight common biomedicine text-mining challenges.
 
 ## Tasks
 
@@ -20,26 +20,25 @@ These tasks cover a diverse range of text genres (biomedical literature and clin
 | CMedQC       |    |    |   |     |       F1       | Medical   |
 | CMedSQC*       |    |    |   |     |       F1       | Medical   |
 | CMedBaikeC       |    |    |   |     |      F1        | Medical   |
-* Those dataset are not publicy avaible now because of privcy issues and will be released as soon as possible. 
+** Those dataset are not publicy available now because of privcy issues and will be released as soon as possible. 
 
-### Sentence similarity
- 
 
 ### Named entity recognition
 
 
-
-### Relation extraction
-To do 
-
-
+### Sentence similarity
+ 
 ### Document multilabel classification
 
- 
+
+### Relation extraction
+To be come soon. 
+
+
+
 
 ### Inference task
-
- 
+To be come soon. 
 
 ### Datasets
 
@@ -51,23 +50,20 @@ All pretrained model can be downloaded at [C-BERT]().
 
 ## Baselines
 
-| Corpus          | Metrics | SOTA* | BERT | C-BERT | 
-|-----------------|--------:|------:|-----:|--------:|
-| CMedNER          |  |   | |    |  
-
+To be come soon. 
 
 ### Fine-tuning with BERT
 
-Code to be released. 
+Code to be released soon. 
 
 ## Citing Chinese BLUE
 
-*  Ningyu Zhang, Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua. []()
+*  Ningyu Zhang, Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua. [Conceptualized Representation Learning for ChineseBiomedical Text]()
 
 ```
 @InProceedings{zhang2019cbert,
-  author    = {},
-  title     = {},
+  author    = {Ningyu Zhang, Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua},
+  title     = {Conceptualized Representation Learning for ChineseBiomedical Text},
   booktitle = {},
   year      = {2019},
 }
