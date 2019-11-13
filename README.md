@@ -20,6 +20,7 @@ These tasks cover a diverse range of text genres (biomedical web data and clinic
 | CMedQC       |    |    |   |     |       F1       | Medical   |
 | CMedSQC*       |    |    |   |     |       F1       | Medical   |
 | CMedBaikeC       |    |    |   |     |      F1        | Medical   |
+
 ** Those dataset are not publicy available now because of privcy issues and will be released as soon as possible. 
 
 
