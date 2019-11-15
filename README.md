@@ -17,9 +17,9 @@ These tasks cover a diverse range of text genres (biomedical web data and clinic
 | CMedQA        |    |    |   | Sentence Similarity    | F1             | Medical   |
 | CMedQSA       |    |    |   | Sentence Similarity    | F1             |Medical    |
 | CMedQT       |    |    |   | Information Rerival    |            |Medical    |
-| CMedQR       |    |    |   |     |        MSE      | Medical   |
-| CMedQC       |    |    |   |     |       F1       | Medical   |
-| CMedSQC*       |    |    |   |     |       F1       | Medical   |
+| CMedQR       |    |    |   |  Sentence Classification   |        F1      | Medical   |
+| CMedQC       |    |    |   |  Sentence Classification   |       F1       | Medical   |
+| CMedSQC*       |    |    |   |   Sentence Classification  |       F1       | Medical   |
 
 ** Those dataset are not publicy available now because of privcy issues and will be released as soon as possible. 
 
@@ -28,6 +28,7 @@ These tasks cover a diverse range of text genres (biomedical web data and clinic
 
 
 ### Sentence similarity
+
  
 ### Document multilabel classification
 
