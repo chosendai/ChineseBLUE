@@ -13,13 +13,13 @@ These tasks cover a diverse range of text genres (biomedical web data and clinic
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
 | CEMRNER*        |    |    |   | Name Entity Recognition    | F1             | Clinical   |
 | CMedQANER          |    |    |   | Name Entity Recognition    | F1             | Medical   |
-| CMedQQMatch*        |    |    |   | Sentence Similarity    | F1             | Medical   |
-| CMedQAMatch        |    |    |   | Sentence Similarity    | F1             | Medical   |
-| CMedQSAMatch        |    |    |   | Sentence Similarity    | F1             |Medical    |
+| CMedQQ*        |    |    |   | Sentence Similarity    | F1             | Medical   |
+| CMedQA        |    |    |   | Sentence Similarity    | F1             | Medical   |
+| CMedQSA       |    |    |   | Sentence Similarity    | F1             |Medical    |
+| CMedQT       |    |    |   | Information Rerival    |            |Medical    |
 | CMedQR       |    |    |   |     |        MSE      | Medical   |
 | CMedQC       |    |    |   |     |       F1       | Medical   |
 | CMedSQC*       |    |    |   |     |       F1       | Medical   |
-| CMedBaikeC       |    |    |   |     |      F1        | Medical   |
 
 ** Those dataset are not publicy available now because of privcy issues and will be released as soon as possible. 
 
