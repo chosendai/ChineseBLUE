@@ -7,39 +7,58 @@ Work in progress
 Chinesse BLUE benchmark consists of  different biomedicine text-mining tasks with  corpora.
 These tasks cover a diverse range of text genres (biomedical web data and clinical notes), dataset sizes, and degrees of difficulty and, more importantly, highlight common biomedicine text-mining challenges.
 
+
+
+![c-bert model](figs/c_bert_model.png)
+
+
 ## Tasks
 
 | Corpus          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
-| CEMRNER*        |    |    |   | Name Entity Recognition    | F1             | Clinical   |
-| CMedQANER          |    |    |   | Name Entity Recognition    | F1             | Medical   |
-| CMedQQ*        |    |    |   | Sentence Similarity    | F1             | Medical   |
-| CMedQA        |    |    |   | Sentence Similarity    | F1             | Medical   |
-| CMedQSA       |    |    |   | Sentence Similarity    | F1             |Medical    |
-| CMedQT       |    |    |   | Information Rerival    |            |Medical    |
-| CMedQR       |    |    |   |  Sentence Classification   |        F1      | Medical   |
-| CMedQC       |    |    |   |  Sentence Classification   |       F1       | Medical   |
-| CMedSQC*       |    |    |   |   Sentence Classification  |       F1       | Medical   |
+| cEMRNER*        |  800  |  100  | 100  | Name Entity Recognition    | F1             | Clinical   |
+| cMedQANER          |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
+| cMedQQ*        | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
+| cMedQA        |  80K  |  10K  |10K   | Question Answering    | F1             | Medical   |
+| cMedSQA       | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
+| cMedIR       |  80K  |  10K  | 10K  | Information Rerival    |            |Medical    |
+| cMedIC       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
+| cMedTC       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
 
-** Those dataset are not publicy available now because of privcy issues and will be released as soon as possible. 
-
-
-### Named entity recognition
-
-
-### Sentence similarity
+** Those dataset are not public available now because of privcy issues and will be released as soon as possible. 
 
  
-### Document multilabel classification
+### Named Entity Recognition (NER) 
 
+Name entity recoginition aims to recognize various entities, including diseases, drugs, syndromes, etc.   The cEMRNER dataset labeled from the Chinese electronic medical records and the cMedQANER dataset labeled from Chinese community question answering is chosen.
 
-### Relation extraction
+### Paraphrase Identification (PI)
+
+Paraphrase Identification aims to identify whether two sentences express the same meaning. We use cMedQQ, which consists of search query pairs. 
+ 
+### Question Answering (QA)
+
+Question answering   can be approximated as ranking candidate answer sentences based on their similarity. We assign 0,1 labels to the QA pairs, which convert to the binary classification problem. We use cMedQA, which consists of long answers and cMedSQA, which consists of short answers. 
+
+### Information  Retrieval (IR)
+
+Information retrival  aims to retrieve most related documents given search queries. IR can be regarded as a ranking task. We adopt the \textbf{PAIR}\footnote{A popular NDCG-like ranking metric in the search engine, which refers to the number of positive ranked documents divide the number of negative ranked documents.} score to evaluate the model.  We use the cMedIR dataset,  which consists of queries with multiple documents and their relative scores. 
+
+### Intent Classification (IC)}
+
+Intent classification aims to assign intent labels to the queries, which can be regarded as multiple label classification tasks. We use the cMedIC dataset, which consists of queries with three intent labels (e.g., no intention, weak intention, and firm intention).
+
+### Text Classification (TC)
+
+Text classification aims to assign multiple labels to the sentence. We use the cMedTC dataset, which consists of biomedical texts with multiple labels.
+
+### Relation extraction (RE)
 To be come soon. 
 
+### Text  Summarization 
+To be come soon. 
 
-
-
-### Inference task
+### Machine Reading Comprehension (MRC)
 To be come soon. 
 
 ### Datasets
