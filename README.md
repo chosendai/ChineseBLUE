@@ -9,7 +9,7 @@ These tasks cover a diverse range of text genres (biomedical web data and clinic
 
 C-BERT is a novel conceptualized representation learning approach. First, we use a different mask generation procedure to mask spans of tokens, rather than only random ones. We also introduce two kinds of masking strategies, namely whole entity masking and whole span masking.  Finally, C-BERT split the input document into segments based on the actual "sentences" provided by the user as positive samples and sample random sentences from other documents as negative samples for the next sentence prediction.  
 
-![c-bert model](figs/c_bert_model.png)
+![c-bert model](figs/c_bert_model.jpg)
 
 
 ## Tasks
@@ -21,7 +21,7 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 | cMedQQ*        | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
 | cMedQA        |  80K  |  10K  |10K   | Question Answering    | F1             | Medical   |
 | cMedSQA       | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
-| cMedIR       |  80K  |  10K  | 10K  | Information Rerival    |            |Medical    |
+| cMedIR       |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
 | cMedIC       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
 | cMedTC       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
 
