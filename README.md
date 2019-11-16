@@ -42,9 +42,9 @@ Question answering   can be approximated as ranking candidate answer sentences b
 
 ### Information  Retrieval (IR)
 
-Information retrival  aims to retrieve most related documents given search queries. IR can be regarded as a ranking task. We adopt the \textbf{PAIR}\footnote{A popular NDCG-like ranking metric in the search engine, which refers to the number of positive ranked documents divide the number of negative ranked documents.} score to evaluate the model.  We use the cMedIR dataset,  which consists of queries with multiple documents and their relative scores. 
+Information retrival  aims to retrieve most related documents given search queries. IR can be regarded as a ranking task.   We use the cMedIR dataset,  which consists of queries with multiple documents and their relative scores. 
 
-### Intent Classification (IC)}
+### Intent Classification (IC)
 
 Intent classification aims to assign intent labels to the queries, which can be regarded as multiple label classification tasks. We use the cMedIC dataset, which consists of queries with three intent labels (e.g., no intention, weak intention, and firm intention).
 
