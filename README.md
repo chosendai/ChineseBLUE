@@ -19,11 +19,11 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 | cEMRNER*        |  800  |  100  | 100  | Name Entity Recognition    | F1             | Clinical   |
 | [cMedQANER](data/cMedQANER/cMedQANER.tar.gz)          |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
 | cMedQQ*        | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
-| cMedQA        |  80K  |  10K  |10K   | Question Answering    | F1             | Medical   |
-| cMedSQA       | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
-| cMedIR       |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
-| cMedIC       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
-| cMedTC       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
+| [cMedQA](data/cMedQANER/cMedQA.tar.gz)        |  80K  |  10K  |10K   | Question Answering    | F1             | Medical   |
+| [cMedSQA](data/cMedQANER/cMedSQA.tar.gz)       | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
+| [cMedIR](data/cMedQANER/cMedIR.tar.gz)       |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
+| [cMedIC](data/cMedQANER/cMedIC.tar.gz)       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
+| [cMedTC](data/cMedQANER/cMedTC.tar.gz)       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
 
 ** Those dataset are not public available now because of privcy issues and will be released as soon as possible. 
 
@@ -63,19 +63,11 @@ To be come soon.
 
 ### Datasets
 
-All datasets can be downloaded at []()
+All datasets can be downloaded at [ChineseBLUE1.0](data/ChineseBLUE.tar.gz)
 
 ### Pretrained Model
 
 All pretrained model can be downloaded at [C-BERT](). 
-
-## Baselines
-
-To be come soon. 
-
-### Fine-tuning with BERT
-
-Code to be released soon. 
 
 ## Citing Chinese BLUE
 
