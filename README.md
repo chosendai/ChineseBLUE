@@ -4,10 +4,10 @@ Work in progress
 
 ## Introduction
 
-Chinesse BLUE benchmark consists of  different biomedicine text-mining tasks with  corpora.
+ChinesseBLUE benchmark consists of  different biomedicine text-mining tasks with  corpora.
 These tasks cover a diverse range of text genres (biomedical web data and clinical notes), dataset sizes, and degrees of difficulty and, more importantly, highlight common biomedicine text-mining challenges.
 
-
+C-BERT is a novel conceptualized representation learning approach. First, we use a different mask generation procedure to mask spans of tokens, rather than only random ones. We also introduce two kinds of masking strategies, namely whole entity masking and whole span masking.  Finally, C-BERT split the input document into segments based on the actual "sentences" provided by the user as positive samples and sample random sentences from other documents as negative samples for the next sentence prediction.  
 
 ![c-bert model](figs/c_bert_model.png)
 
