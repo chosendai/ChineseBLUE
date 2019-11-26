@@ -16,7 +16,7 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 
 | Dataset          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
-| cEHRNER*        |  800  |  100  | 100  | Name Entity Recognition    | F1             | Clinical   |
+| cEHRNER*        |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
 | [cMedQANER](data/cMedQANER/cMedQANER.tar.gz)          |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
 | cMedQQ*        | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
 | [cMedQNLI](data/cMedQANER/cMedQNLI.tar.gz)        |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
