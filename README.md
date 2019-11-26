@@ -99,7 +99,11 @@ All pretrained model can be downloaded at [C-BERT]().
 
 ## Acknowledgments
 
-We are also grateful to the authors of BERT to make the data and codes publicly available. 
+We are also grateful to the authors of BERT to make the data and codes publicly available.  
+github1 
+github 2
+paper 1 
+paper 2 
 
 ## Disclaimer
 This project is not the official product of Alibaba. The information produced on this website is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of information produced on this website.   If you have questions about the information produced on this website, please see a health care professional. 
