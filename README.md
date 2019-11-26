@@ -16,14 +16,14 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 
 | Dataset          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
-| cEHRNER*        |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
-| [cMedQANER](data/cMedQANER/cMedQANER.tar.gz)          |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
-| cMedQQ*        | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
+| cEHRNER(data/cEHRNER/cEHRNER.tar.gz)        |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
+| cMedQANER         |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
+| cMedQQ(data/cMedQQ/cMedQQ.tar.gz)      | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
 | [cMedQNLI](data/cMedQANER/cMedQNLI.tar.gz)        |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
 | [cMedQA](data/cMedQANER/cMedSQA.tar.gz)       | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
 | [cMedIR](data/cMedQANER/cMedIR.tar.gz)       |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
 | [cMedIC](data/cMedQANER/cMedIC.tar.gz)       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
-| [cMedTC]*       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
+| [cMedTC](data/cMedTC/cMedTC.tar.gz)       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
 
 ** Those dataset are not public available now because of privcy issues and will be released as soon as possible. 
 
