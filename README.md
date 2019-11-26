@@ -24,7 +24,7 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 | [cMedIC](data/cMedQANER/cMedIC.tar.gz)       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
 | [cMedTC](data/cMedTC/cMedTC.tar.gz)       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
  | [dialog]()       |     |     |   |  Sentence Classification   |       F1       | Medical   |
-
+chi chinese
  
 ### Named Entity Recognition (NER) 
 
