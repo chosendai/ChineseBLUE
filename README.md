@@ -86,7 +86,7 @@ Paper will be released soon.
 
 ## Acknowledgments
 
-We are also grateful to the authors of [BERT](https://github.com/google-research/bert)  and [wwm-BERT](https://github.com/ymcui/Chinese-BERT-wwm)  to make the data and codes publicly available. We are also grateful to the authors of paper "[Enhancing Dialogue Symptom Diagnosis with Global Attention and Symptom Graph](https://www.aclweb.org/anthology/D19-1508.pdf)"  and  "[Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8548603)"  who released the dataset [CMDD](www.sdspeople.fudan.edu.cn/zywei/data/emnlp2019- cmdd.zip) and [cMedQA2](https://github.com/zhangsheng93/cMedQA2). 
+We are also grateful to the authors of [BERT](https://github.com/google-research/bert)  and [wwm-BERT](https://github.com/ymcui/Chinese-BERT-wwm)  to make the data and codes publicly available. We are also grateful to the authors of paper "[Enhancing Dialogue Symptom Diagnosis with Global Attention and Symptom Graph](https://www.aclweb.org/anthology/D19-1508.pdf)"  and  "[Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8548603)"  who released the dataset [CMDD](http://www.sdspeople.fudan.edu.cn/zywei/data/emnlp2019-cmdd.zip) and [cMedQA2](https://github.com/zhangsheng93/cMedQA2). 
 
 
 ## Disclaimer
