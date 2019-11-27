@@ -1,6 +1,5 @@
 # ChineseBLUE, the Chinese Biomedical Language Understanding Evaluation benchmark
- 
-Work in progress
+
 
 ## Introduction
 
@@ -14,43 +13,59 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 
 ## Tasks
 
-| Corpus          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
+| Dataset          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
-| cEMRNER*        |  800  |  100  | 100  | Name Entity Recognition    | F1             | Clinical   |
-| [cMedQANER](data/cMedQANER/cMedQANER.tar.gz)          |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
-| cMedQQ*        | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
-| cMedQA        |  80K  |  10K  |10K   | Question Answering    | F1             | Medical   |
-| cMedSQA       | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
-| cMedIR       |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
-| cMedIC       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
-| cMedTC       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
-
-** Those dataset are not public available now because of privcy issues and will be released as soon as possible. 
-
+| [cEHRNER](data/cEHRNER/cEHRNER.tar.gz)        |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
+| cMedQANER         |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
+| [cMedQQ](data/cMedQQ/cMedQQ.tar.gz)      | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
+| [cMedQNLI](data/cMedQANER/cMedQNLI.tar.gz)        |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
+| [cMedQA](data/cMedQANER/cMedSQA.tar.gz)       | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
+| [cMedIR](data/cMedQANER/cMedIR.tar.gz)       |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
+| [cMedIC](data/cMedQANER/cMedIC.tar.gz)       |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
+| [cMedTC](data/cMedTC/cMedTC.tar.gz)       | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
+ | [dialog]()       |     |     |   |  Sentence Classification   |       F1       | Medical   |
+chi chinese
  
 ### Named Entity Recognition (NER) 
 
-Name entity recoginition aims to recognize various entities, including diseases, drugs, syndromes, etc.   The cEMRNER dataset labeled from the Chinese electronic medical records and the cMedQANER dataset labeled from Chinese community question answering is chosen.
+Name entity recoginition aims to recognize various entities, including diseases, drugs, syndromes, etc.   The cEHRNER dataset labeled from the Chinese electronic health records and the cMedQANER dataset labeled from Chinese community question answering is chosen.
 
+'''
+'''
+
+'''
+'''
 ### Paraphrase Identification (PI)
 
 Paraphrase Identification aims to identify whether two sentences express the same meaning. We use cMedQQ, which consists of search query pairs. 
+
+'''
+'''
  
 ### Question Answering (QA)
 
-Question answering   can be approximated as ranking candidate answer sentences based on their similarity. We assign 0,1 labels to the QA pairs, which convert to the binary classification problem. We use cMedQA, which consists of long answers and cMedSQA, which consists of short answers. 
+Question answering   can be approximated as ranking candidate answer sentences based on their similarity. We assign 0,1 labels to the QA pairs, which convert to the binary classification problem. We use cMedQA, which consists of long answers and cMedSQA, which consists of short answers.
+
+'''
+'''
 
 ### Information  Retrieval (IR)
 
-Information retrival  aims to retrieve most related documents given search queries. IR can be regarded as a ranking task. We adopt the \textbf{PAIR}\footnote{A popular NDCG-like ranking metric in the search engine, which refers to the number of positive ranked documents divide the number of negative ranked documents.} score to evaluate the model.  We use the cMedIR dataset,  which consists of queries with multiple documents and their relative scores. 
+Information retrival  aims to retrieve most related documents given search queries. IR can be regarded as a ranking task.   We use the cMedIR dataset,  which consists of queries with multiple documents and their relative scores. 
+'''
+'''
 
-### Intent Classification (IC)}
+### Intent Classification (IC)
 
 Intent classification aims to assign intent labels to the queries, which can be regarded as multiple label classification tasks. We use the cMedIC dataset, which consists of queries with three intent labels (e.g., no intention, weak intention, and firm intention).
+'''
+'''
 
 ### Text Classification (TC)
 
 Text classification aims to assign multiple labels to the sentence. We use the cMedTC dataset, which consists of biomedical texts with multiple labels.
+'''
+'''
 
 ### Relation extraction (RE)
 To be come soon. 
@@ -63,19 +78,11 @@ To be come soon.
 
 ### Datasets
 
-All datasets can be downloaded at []()
+All datasets can be downloaded at [ChineseBLUE1.0](data/ChineseBLUE.tar.gz)
 
 ### Pretrained Model
 
 All pretrained model can be downloaded at [C-BERT](). 
-
-## Baselines
-
-To be come soon. 
-
-### Fine-tuning with BERT
-
-Code to be released soon. 
 
 ## Citing Chinese BLUE
 
@@ -92,7 +99,11 @@ Code to be released soon.
 
 ## Acknowledgments
 
-We are also grateful to the authors of BERT to make the data and codes publicly available. 
+We are also grateful to the authors of BERT to make the data and codes publicly available.  
+github1 
+github 2
+paper 1 
+paper 2 
 
 ## Disclaimer
 This project is not the official product of Alibaba. The information produced on this website is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of information produced on this website.   If you have questions about the information produced on this website, please see a health care professional. 
