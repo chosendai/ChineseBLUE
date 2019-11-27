@@ -18,8 +18,8 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 | [cEHRNER](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cEHRNER/cEHRNER.tar.gz) |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
 | cMedQANER         |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
 | [cMedQQ](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedQQ/cMedQQ.tar.gz) | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
-| [cMedQNLI](https://drive.google.com/file/d/1LKeqFIk1QanlDcLTwSgy8I8Y4beXhyXM/view) |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
-| [cMedQA](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedQA/cMedQA.tar.gz) | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
+| [cMedQNLI](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedQNLI/cMedQNLI.tar.gz) |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
+| [cMedQA](https://drive.google.com/file/d/1LKeqFIk1QanlDcLTwSgy8I8Y4beXhyXM/view) | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
 | [cMedIR](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedIR/cMedIR.tar.gz) |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
 | [cMedIC](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedIC/cMedIC.tar.gz) |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
 | [cMedTC](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedTC/cMedTC.tar.gz) | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
@@ -40,7 +40,7 @@ Question natural language inference aims to   identify   wheather  the answer is
 
 ### Question Answering (QA)
 
-Question answering   can be approximated as ranking candidate answer sentences based on their similarity. We assign 0,1 labels to the QA pairs, which convert to the binary classification problem. We use **cMedSQA**  released from the paper  "[Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8548603)", which consists of questions and  their answers.
+Question answering   can be approximated as ranking candidate answer sentences based on their similarity. We assign 0,1 labels to the QA pairs, which convert to the binary classification problem. We use **cMedQA**  released from the paper  "[Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8548603)", which consists of questions and  their answers.
 
 ### Information  Retrieval (IR)
 
