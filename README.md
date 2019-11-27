@@ -78,7 +78,7 @@ Paper will be released soon.
 ```
 @InProceedings{zhang2019cbert,
   author    = {Ningyu Zhang, Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua},
-  title     = {Conceptualized Representation Learning for ChineseBiomedical Text},
+  title     = {Conceptualized Representation Learning for Chinese Biomedical Text},
   booktitle = {},
   year      = {2019},
 }
