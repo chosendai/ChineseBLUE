@@ -23,7 +23,7 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 | [cMedIR](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedQANER/cMedIR.tar.gz) |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
 | [cMedIC](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedQANER/cMedIC.tar.gz) |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
 | [cMedTC](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedTC/cMedTC.tar.gz) | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
-| [CMDD](www.sdspeople.fudan.edu.cn/zywei/data/emnlp2019- cmdd.zip) | 1240 | 412 | 412 | Symptom Diagnosis |       F1       | Dialogue |
+| [CMDD](http://www.sdspeople.fudan.edu.cn/zywei/data/emnlp2019-cmdd.zip) | 1240 | 412 | 412 | Symptom Diagnosis |       F1       | Dialogue |
 
 
 ### Named Entity Recognition (NER) 
