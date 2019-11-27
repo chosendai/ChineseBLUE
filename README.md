@@ -73,7 +73,7 @@ All pretrained model can be downloaded at [C-BERT]().
 
 Paper will be released soon.
 
-*  Ningyu Zhang, Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua. [Conceptualized Representation Learning for Chinese Biomedical Text]()
+*  [Ningyu Zhang](zxlzr.github.io), Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua. [Conceptualized Representation Learning for Chinese Biomedical Text]()
 
 ```
 @InProceedings{zhang2019cbert,
