@@ -1,6 +1,6 @@
 # ChineseBLUE, the Chinese Biomedical Language Understanding Evaluation benchmark
 
-
+[![HitCount](http://hits.dwyl.io/zxlzr/https://githubcom/AliMedical/Chinese_BLUE_Benchmark.svg)](http://hits.dwyl.io/zxlzr/https://githubcom/AliMedical/Chinese_BLUE_Benchmark)
 ## Introduction
 
 ChinesseBLUE benchmark consists of  different biomedicine text-mining tasks with  corpora.
