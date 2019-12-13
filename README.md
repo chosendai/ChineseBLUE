@@ -59,7 +59,7 @@ Text classification aims to assign multiple labels to the sentence. We use the *
 Symptom diagnosis is a challenging yet profound problem in natural language processing. We use the **CMDD** dataset released from the paper"[Enhancing Dialogue Symptom Diagnosis with Global Attention and Symptom Graph](https://www.aclweb.org/anthology/D19-1508.pdf)".
 
 ### Relation extraction (RE)
-To become soon. 
+Coming soon. 
 
 ### Datasets
 
