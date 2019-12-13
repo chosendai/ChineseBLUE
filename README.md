@@ -1,6 +1,6 @@
 # ChineseBLUE, the Chinese Biomedical Language Understanding Evaluation benchmark
 
-[![HitCount](http://hits.dwyl.io/zxlzr/https://githubcom/alibaba-research/Chinese_BLUE_Benchmark.svg)](http://hits.dwyl.io/zxlzr/https://githubcom/alibaba-research/Chinese_BLUE_Benchmark)
+[![HitCount](http://hits.dwyl.io/zxlzr/https://githubcom/alibaba-research/ChineseBLUE.svg)](http://hits.dwyl.io/zxlzr/https://githubcom/alibaba-research/ChineseBLUE)
 ## Introduction
 
 ChinesseBLUE benchmark consists of different biomedicine text-mining tasks with corpora.
@@ -15,14 +15,14 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 
 | Dataset          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
-| [cEHRNER](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cEHRNER/cEHRNER.tar.gz) |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
-| [cMedQANER](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cMedQANER/cMedQANER.tar.gz)         |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
-| [cMedQQ](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cMedQQ/cMedQQ.tar.gz) | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
-| [cMedQNLI](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cMedQNLI/cMedQNLI.tar.gz) |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
-| [cMedQA](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cMedQA/cMedQA.tar.gz) | 80K  | 10K   |10K | Question Answering    | F1             |Medical    |
-| [cMedIR](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cMedIR/cMedIR.tar.gz) |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
-| [cMedIC](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cMedIC/cMedIC.tar.gz) |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
-| [cMedTC](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/cMedTC/cMedTC.tar.gz) | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
+| [cEHRNER](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cEHRNER/cEHRNER.tar.gz) |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
+| [cMedQANER](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQANER/cMedQANER.tar.gz)         |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
+| [cMedQQ](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQQ/cMedQQ.tar.gz) | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
+| [cMedQNLI](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQNLI/cMedQNLI.tar.gz) |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
+| [cMedQA](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQA/cMedQA.tar.gz) | 80K  | 10K   |10K | Question Answering    | F1             |Medical    |
+| [cMedIR](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedIR/cMedIR.tar.gz) |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
+| [cMedIC](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedIC/cMedIC.tar.gz) |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
+| [cMedTC](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedTC/cMedTC.tar.gz) | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
 | [CMDD](http://www.sdspeople.fudan.edu.cn/zywei/data/emnlp2019-cmdd.zip) | 1240 | 412 | 412 | Symptom Diagnosis |       F1       | Dialogue |
 
 
@@ -63,7 +63,7 @@ Coming soon.
 
 ### Datasets
 
-All datasets can be downloaded at [ChineseBLUE1.0](https://raw.githubusercontent.com/alibaba-research/Chinese_BLUE_Benchmark/master/data/ChineseBLUE.tar.gz)
+All datasets can be downloaded at [ChineseBLUE1.0](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/ChineseBLUE.tar.gz)
 
 ### Pretrained Model
 
