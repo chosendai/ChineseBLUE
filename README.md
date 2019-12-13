@@ -1,6 +1,6 @@
 # ChineseBLUE, the Chinese Biomedical Language Understanding Evaluation benchmark
 
-
+[![HitCount](http://hits.dwyl.io/zxlzr/https://githubcom/AliMedical/Chinese_BLUE_Benchmark.svg)](http://hits.dwyl.io/zxlzr/https://githubcom/AliMedical/Chinese_BLUE_Benchmark)
 ## Introduction
 
 ChinesseBLUE benchmark consists of  different biomedicine text-mining tasks with  corpora.
@@ -19,7 +19,7 @@ C-BERT is a novel conceptualized representation learning approach. First, we use
 | cMedQANER         |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
 | [cMedQQ](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedQQ/cMedQQ.tar.gz) | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
 | [cMedQNLI](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedQNLI/cMedQNLI.tar.gz) |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
-| [cMedQA](https://drive.google.com/file/d/1LKeqFIk1QanlDcLTwSgy8I8Y4beXhyXM/view) | 10K   | 2K   | 2K  | Question Answering    | F1             |Medical    |
+| [cMedQA](https://drive.google.com/open?id=1LKeqFIk1QanlDcLTwSgy8I8Y4beXhyXM) | 10M   | 800K   | 800K | Question Answering    | F1             |Medical    |
 | [cMedIR](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedIR/cMedIR.tar.gz) |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
 | [cMedIC](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedIC/cMedIC.tar.gz) |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
 | [cMedTC](https://raw.githubusercontent.com/AliMedical/Chinese_BLUE_Benchmark/master/data/cMedTC/cMedTC.tar.gz) | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
