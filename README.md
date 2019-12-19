@@ -108,12 +108,12 @@ python finetune_cMedQANER.py\
 
 Paper will be released soon.
 
-*  [Ningyu Zhang](https://zxlzr.github.io), Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua. [Conceptualized Representation Learning for Chinese Biomedical Text]()
+*  [Ningyu Zhang](https://zxlzr.github.io), Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua. [Conceptualized Representation Learning for Chinese Biomedical Text Mining]()
 
 ```
 @InProceedings{zhang2019cbert,
   author    = {Ningyu Zhang, Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua},
-  title     = {Conceptualized Representation Learning for Chinese Biomedical Text},
+  title     = {Conceptualized Representation Learning for Chinese Biomedical Text Mining},
   booktitle = {WSDM 2020},
   year      = {2020},
 }
