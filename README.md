@@ -8,7 +8,7 @@
 ChinesseBLUE benchmark consists of different biomedicine text-mining tasks with corpora.
 These tasks cover a diverse range of text genres (biomedical web data and clinical notes), dataset sizes, and degrees of difficulty and, more importantly, highlight common biomedicine text-mining challenges.
 
-C-BERT is a novel conceptualized representation learning approach. First, we use a different mask generation procedure to mask spans of tokens, rather than only random ones. We also introduce two kinds of masking strategies, namely whole entity masking and whole span masking.  Finally, C-BERT split the input document into segments based on the actual "sentences" provided by the user as positive samples and sample random sentences from other documents as negative samples for the next sentence prediction.  
+MC-BERT is a novel conceptualized representation learning approach for the medical domain. First, we use a different mask generation procedure to mask spans of tokens, rather than only random ones. We also introduce two kinds of masking strategies, namely whole entity masking and whole span masking.  Finally, MC-BERT split the input document into segments based on the actual "sentences" provided by the user as positive samples and sample random sentences from other documents as negative samples for the next sentence prediction.  
 
 ![c-bert model](figs/c_bert_model.jpg)
 
@@ -69,7 +69,40 @@ All datasets can be downloaded at [ChineseBLUE1.0](https://raw.githubusercontent
 
 ### Pretrained Model
 
-All pre-trained models can be downloaded at [C-BERT](). 
+All pre-trained models can be downloaded at [MC-BERT](https://drive.google.com/open?id=1ccXRvaeox5XCNP_aSk_ttLBY695Erlok). 
+
+## How to finetune?
+
+sequence labeling task:
+
+'''
+python finetune_classifier.py\
+  --task_name=cmedtc\
+  --do_train=True\
+  --do_eval=True\
+  --data_dir=./data/cMedTC\
+  --output_dir=model_cMedTC\
+  --bert_config_file=mc_bert_base/bert_config.json\
+  --vocab_file=mc_bert_base/vocab.txt\
+  --init_checkpoint=mc_bert_base/bert_model.ckpt
+'''
+
+classification task:
+
+...
+python finetune_cMedQANER.py\
+  --task_name=cmedqaner\
+  --do_train=True\
+  --do_eval=True\
+  --data_dir=./data/cMedQANER\
+  --output_dir=model_cMedQANER\
+  --bert_config_file=mc_bert_base/bert_config.json\
+  --vocab_file=mc_bert_base/vocab.txt\
+  --init_checkpoint=mc_bert_base/bert_model.ckpt
+...
+
+
+
 
 ## Citing Chinese BLUE
 
@@ -81,8 +114,8 @@ Paper will be released soon.
 @InProceedings{zhang2019cbert,
   author    = {Ningyu Zhang, Qianghuai Jia, Kangping Yin, Liang Dong, Feng Gao, Nengwei Hua},
   title     = {Conceptualized Representation Learning for Chinese Biomedical Text},
-  booktitle = {},
-  year      = {2019},
+  booktitle = {WSDM 2020},
+  year      = {2020},
 }
 ```
 
