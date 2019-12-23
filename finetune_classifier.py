@@ -25,7 +25,7 @@ import modeling
 import optimization
 import tokenization
 import tensorflow as tf
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="5"
 flags = tf.flags
 
 FLAGS = flags.FLAGS
@@ -288,15 +288,14 @@ class cMedQAProcessor(DataProcessor):
             if i == 0:
                 continue
             guid = "%s-%s" % (set_type, i)
-            text_a = tokenization.convert_to_unicode(line[3])
-            text_b = tokenization.convert_to_unicode(line[4])
+            text_a = tokenization.convert_to_unicode(line[1])
+            text_b = tokenization.convert_to_unicode(line[2])
             label = tokenization.convert_to_unicode(line[0])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
         return examples
 
 class cMedQQProcessor(DataProcessor):
-    """Processor for the MultiNLI data set (GLUE version)."""
 
     def get_train_examples(self, data_dir):
         """See base class."""
@@ -306,7 +305,36 @@ class cMedQQProcessor(DataProcessor):
     def get_dev_examples(self, data_dir):
         """See base class."""
         return self._create_examples(
-            self._read_txt(os.path.join(data_dir, "dev_matched.txt")),
+            self._read_txt(os.path.join(data_dir, "dev.txt")),
+            "dev_matched")
+
+    def get_labels(self):
+        """See base class."""
+        return ["0", "1"]
+
+    def _create_examples(self, lines, set_type):
+        """Creates examples for the training and dev sets."""
+        examples = []
+        for (i, line) in enumerate(lines):
+            guid = "%s-%s" % (set_type, tokenization.convert_to_unicode(line[0]))
+            text_a = tokenization.convert_to_unicode(line[1])
+            text_b = tokenization.convert_to_unicode(line[2])
+            label = tokenization.convert_to_unicode(line[0])
+            examples.append(
+                InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
+        return examples
+        
+
+class cMedQNLIProcessor(DataProcessor):
+    def get_train_examples(self, data_dir):
+        """See base class."""
+        return self._create_examples(
+            self._read_txt(os.path.join(data_dir, "train.txt")), "train")
+
+    def get_dev_examples(self, data_dir):
+        """See base class."""
+        return self._create_examples(
+            self._read_txt(os.path.join(data_dir, "dev.txt")),
             "dev_matched")
 
     def get_labels(self):
@@ -320,40 +348,11 @@ class cMedQQProcessor(DataProcessor):
             if i == 0:
                 continue
             guid = "%s-%s" % (set_type, tokenization.convert_to_unicode(line[0]))
-            text_a = tokenization.convert_to_unicode(line[8])
-            text_b = tokenization.convert_to_unicode(line[9])
-            label = tokenization.convert_to_unicode(line[-1])
+            text_a = tokenization.convert_to_unicode(line[1])
+            text_b = tokenization.convert_to_unicode(line[2])
+            label = tokenization.convert_to_unicode(line[0])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
-        return examples
-        
-
-class cMedQNLIProcessor(DataProcessor):
-    """Processor for the CoLA data set (GLUE version)."""
-
-    def get_train_examples(self, data_dir):
-        """See base class."""
-        return self._create_examples(
-            self._read_txt(os.path.join(data_dir, "train.txt")), "train")
-
-    def get_dev_examples(self, data_dir):
-        """See base class."""
-        return self._create_examples(
-            self._read_txt(os.path.join(data_dir, "dev.txt")), "dev")
-
-    def get_labels(self):
-        """See base class."""
-        return ["0", "1"]
-
-    def _create_examples(self, lines, set_type):
-        """Creates examples for the training and dev sets."""
-        examples = []
-        for (i, line) in enumerate(lines):
-            guid = "%s-%s" % (set_type, i)
-            text_a = tokenization.convert_to_unicode(line[3])
-            label = tokenization.convert_to_unicode(line[1])
-            examples.append(
-                InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
         return examples
 
 def convert_single_example(ex_index, example, label_list, max_seq_length,

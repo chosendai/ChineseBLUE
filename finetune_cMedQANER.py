@@ -1,7 +1,7 @@
 #! usr/bin/env python3
 # -*- coding:utf-8 -*-
 """
-Copyright 2024 The Google AI Language Team Authors.
+Copyright 2026 The Google AI Language Team Authors.
 BASED ON Google_BERT.
 @Author:zhoukaiyin
 Adjust code for chinese ner
@@ -22,6 +22,7 @@ import tf_metrics
 import pickle
 flags = tf.flags
 FLAGS = flags.FLAGS
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 
 flags.DEFINE_string(
     "data_dir", None,
@@ -170,7 +171,7 @@ class DataProcessor(object):
             return lines
 
 
-class NerProcessor(DataProcessor):
+class cMedQANerProcessor(DataProcessor):
     def get_train_examples(self, data_dir):
         return self._create_example(
             self._read_data(os.path.join(data_dir, "train.txt")), "train"
@@ -188,7 +189,7 @@ class NerProcessor(DataProcessor):
 
     def get_labels(self):
         # prevent potential bug for chinese text mixed with english text
-        return [u"O", u"B_symptom", u"I_symptom", u"B_disease", u"I_disease", u"B_drug", u"I_drug",u"B_treatment",u"I_treatment",u"B_test",u"I_test",u"B_body",u"I_body",u"B_crowd",u"I_crowd",u"B_level",u"I_level",u"B_physiology",u"I_physiology",u"B_department",u"I_department","[CLS]","[SEP]"]
+        return [u"O", u"B_symptom", u"I_symptom", u"B_disease", u"I_disease", u"B_drug", u"I_drug",u"B_treatment",u"I_treatment",u"B_test",u"I_test",u"B_body",u"I_body",u"B_crowd",u"I_crowd",u"B_feature",u"I_feature",u"B_physiology",u"I_physiology",u"B_department",u"I_department","B_time","I_time","[CLS]","[SEP]"]
 
     def _create_example(self, lines, set_type):
         examples = []
@@ -292,7 +293,9 @@ def filed_based_convert_examples_to_features(
     label_map = {}
     for (i, label) in enumerate(label_list,1):
         label_map[label] = i
+    print(label_map)
     tmp_path = os.path.join(FLAGS.output_dir, "label2id.pkl")
+    print(tmp_path)
     with tf.gfile.GFile(tmp_path,mode='wb') as w:
    #with open('./output/label2id.pkl','wb') as w:
         pickle.dump(label_map,w)
@@ -380,7 +383,7 @@ def create_model(bert_config, is_training, input_ids, input_mask,
         logits = tf.matmul(output_layer, output_weight, transpose_b=True)
         logits = tf.nn.bias_add(logits, output_bias)
         #logits = tf.reshape(logits, [-1, FLAGS.max_seq_length, 11])
-        logits = tf.reshape(logits, [-1, FLAGS.max_seq_length, 24])
+        logits = tf.reshape(logits, [-1, FLAGS.max_seq_length, 26])
         # mask = tf.cast(input_mask,tf.float32)
         # loss = tf.contrib.seq2seq.sequence_loss(logits,labels,mask)
         # return (loss, logits, predict)
@@ -446,9 +449,9 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
             def metric_fn(per_example_loss, label_ids, logits):
             # def metric_fn(label_ids, logits):
                 predictions = tf.argmax(logits, axis=-1, output_type=tf.int32)
-                precision = tf_metrics.precision(label_ids,predictions,24,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],average="macro")
-                recall = tf_metrics.recall(label_ids,predictions,24,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],average="macro")
-                f = tf_metrics.f1(label_ids,predictions,24,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],average="macro")
+                precision = tf_metrics.precision(label_ids,predictions,26,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],average="macro")
+                recall = tf_metrics.recall(label_ids,predictions,26,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],average="macro")
+                f = tf_metrics.f1(label_ids,predictions,26,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],average="macro")
                 return {
                     "eval_precision":precision,
                     "eval_recall":recall,
@@ -473,8 +476,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
 def main(_):
     tf.logging.set_verbosity(tf.logging.INFO)
     processors = {
-        "cEHRNER": cEHRNERProcessor
-        "cMedQANER": CMedQANERProcessor
+            "cmedqaner": cMedQANerProcessor,
     }
     #if not FLAGS.do_train and not FLAGS.do_eval:
     #    raise ValueError("At least one of `do_train` or `do_eval` must be True.")

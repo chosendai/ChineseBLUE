@@ -1,0 +1,1 @@
+python  finetune_classifier.py --task_name=cmedic --do_train=True --do_eval=True --data_dir=./data/cMedIC --output_dir=cMedIC --bert_config_file=mc_bert/bert_config.json --vocab_file=mc_bert/vocab.txt  --init_checkpoint=mc_bert/bert_model.ckpt

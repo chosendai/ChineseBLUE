@@ -20,6 +20,7 @@ from sklearn.metrics import f1_score,precision_score,recall_score
 from tensorflow.python.ops import math_ops
 import tf_metrics
 import pickle
+os.environ["CUDA_VISIBLE_DEVICES"]="5"
 flags = tf.flags
 FLAGS = flags.FLAGS
 
@@ -76,7 +77,7 @@ flags.DEFINE_integer("predict_batch_size", 8, "Total batch size for predict.")
 
 flags.DEFINE_float("learning_rate", 5e-5, "The initial learning rate for Adam.")
 
-flags.DEFINE_float("num_train_epochs", 30, "Total number of training epochs to perform.")
+flags.DEFINE_float("num_train_epochs", 40, "Total number of training epochs to perform.")
 
 
 
@@ -170,7 +171,7 @@ class DataProcessor(object):
             return lines
 
 
-class NerProcessor(DataProcessor):
+class cEHRNerProcessor(DataProcessor):
     def get_train_examples(self, data_dir):
         return self._create_example(
             self._read_data(os.path.join(data_dir, "train.txt")), "train"
@@ -380,7 +381,7 @@ def create_model(bert_config, is_training, input_ids, input_mask,
         logits = tf.matmul(output_layer, output_weight, transpose_b=True)
         logits = tf.nn.bias_add(logits, output_bias)
         #logits = tf.reshape(logits, [-1, FLAGS.max_seq_length, 11])
-        logits = tf.reshape(logits, [-1, FLAGS.max_seq_length, 17])
+        logits = tf.reshape(logits, [-1, FLAGS.max_seq_length, 18])
         # mask = tf.cast(input_mask,tf.float32)
         # loss = tf.contrib.seq2seq.sequence_loss(logits,labels,mask)
         # return (loss, logits, predict)
@@ -446,9 +447,9 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
             def metric_fn(per_example_loss, label_ids, logits):
             # def metric_fn(label_ids, logits):
                 predictions = tf.argmax(logits, axis=-1, output_type=tf.int32)
-                precision = tf_metrics.precision(label_ids,predictions,17,[1,2,3,4,5,6,7,8,9,10,11,12,13,14],average="macro")
-                recall = tf_metrics.recall(label_ids,predictions,17,[1,2,3,4,5,6,7,8,9,10,11,12,13,14],average="macro")
-                f = tf_metrics.f1(label_ids,predictions,17,[1,2,3,4,5,6,7,8,9,10,11,12,13,14],average="macro")
+                precision = tf_metrics.precision(label_ids,predictions,18,[1,2,3,4,5,6,7,8,9,10,11,12,13,14],average="macro")
+                recall = tf_metrics.recall(label_ids,predictions,18,[1,2,3,4,5,6,7,8,9,10,11,12,13,14],average="macro")
+                f = tf_metrics.f1(label_ids,predictions,18,[1,2,3,4,5,6,7,8,9,10,11,12,13,14],average="macro")
                 return {
                     "eval_precision":precision,
                     "eval_recall":recall,
@@ -473,7 +474,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
 def main(_):
     tf.logging.set_verbosity(tf.logging.INFO)
     processors = {
-        "ner": NERProcessor
+        "cehrner": cEHRNerProcessor
     }
     #if not FLAGS.do_train and not FLAGS.do_eval:
     #    raise ValueError("At least one of `do_train` or `do_eval` must be True.")
