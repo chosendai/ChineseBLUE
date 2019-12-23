@@ -17,14 +17,14 @@ MC-BERT is a novel conceptualized representation learning approach for the medic
 
 | Dataset          | Train |  Dev | Test | Task                    | Metrics             | Domain     |
 |-----------------|------:|-----:|-----:|-------------------------|---------------------|------------|
-| [cEHRNER](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cEHRNER/cEHRNER.tar.gz) |  915  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
-| [cMedQANER](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQANER/cMedQANER.tar.gz)         |  800  | 100   | 100  | Name Entity Recognition    | F1             | Medical   |
-| [cMedQQ](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQQ/cMedQQ.tar.gz) | 20K   | 5K   | 5K  | Paraphrase Identification   | F1             | Medical   |
-| [cMedQNLI](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQNLI/cMedQNLI.tar.gz) |  80K  |  10K  |10K   | Question Natural Language Inference  | F1             | Medical   |
-| [cMedQA](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQA/cMedQA.tar.gz) | 80K  | 10K   |10K | Question Answering    | F1             |Medical    |
-| [cMedIR](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedIR/cMedIR.tar.gz) |  80K  |  10K  | 10K  | Information Rerival    |     MRR       |Medical    |
-| [cMedIC](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedIC/cMedIC.tar.gz) |  1000  |  200  | 200  |  Intent Classification   |        F1      | Medical   |
-| [cMedTC](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedTC/cMedTC.tar.gz) | 20K   | 1K   | 1K  |  Sentence Classification   |       F1       | Medical   |
+| [cEHRNER](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cEHRNER/cEHRNER.tar.gz) |  914  | 44   | 41  | Name Entity Recognition    | F1             | Clinical   |
+| [cMedQANER](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQANER/cMedQANER.tar.gz)         |  1,673 | 175   | 215  | Name Entity Recognition    | F1             | Medical   |
+| [cMedQQ](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQQ/cMedQQ.tar.gz) | 16,071  |1,793   | 1,935  | Paraphrase Identification   | F1             | Medical   |
+| [cMedQNLI](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQNLI/cMedQNLI.tar.gz) |  80,950  |  9,065  |9,969   | Question Natural Language Inference  | F1             | Medical   |
+| [cMedQA](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedQA/cMedQA.tar.gz) | 49,719 | 5,475   |6,149 | Question Answering    | F1             |Medical    |
+| [cMedIR](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedIR/cMedIR.tar.gz) |  80,000 |  10,000  | 10,000  | Information Rerival    |     MRR       |Medical    |
+| [cMedIC](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedIC/cMedIC.tar.gz) |  1,683  | 123  |84  |  Intent Classification   |        F1      | Medical   |
+| [cMedTC](https://raw.githubusercontent.com/alibaba-research/ChineseBLUE/master/data/cMedTC/cMedTC.tar.gz) | 1,683   | 123   | 84  |  Sentence Classification   |       F1       | Medical   |
 | [CMDD](http://www.sdspeople.fudan.edu.cn/zywei/data/emnlp2019-cmdd.zip) | 1240 | 412 | 412 | Symptom Diagnosis |       F1       | Dialogue |
 
 
