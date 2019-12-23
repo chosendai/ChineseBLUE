@@ -76,12 +76,12 @@ All pre-trained models can be downloaded at [MC-BERT](https://drive.google.com/o
 sequence labeling task:
 
 ```
-python finetune_classifier.py\
-  --task_name=cmedtc\
+python finetune_cMedQANER.py\
+  --task_name=cmedqaner\
   --do_train=True\
   --do_eval=True\
-  --data_dir=./data/cMedTC\
-  --output_dir=model_cMedTC\
+  --data_dir=./data/cMedQANER\
+  --output_dir=model_cMedQANER\
   --bert_config_file=mc_bert_base/bert_config.json\
   --vocab_file=mc_bert_base/vocab.txt\
   --init_checkpoint=mc_bert_base/bert_model.ckpt
@@ -90,12 +90,12 @@ python finetune_classifier.py\
 classification task:
 
 ```
-python finetune_cMedQANER.py\
-  --task_name=cmedqaner\
+python finetune_classifier.py\
+  --task_name=cmedtc\
   --do_train=True\
   --do_eval=True\
-  --data_dir=./data/cMedQANER\
-  --output_dir=model_cMedQANER\
+  --data_dir=./data/cMedTC\
+  --output_dir=model_cMedTC\
   --bert_config_file=mc_bert_base/bert_config.json\
   --vocab_file=mc_bert_base/vocab.txt\
   --init_checkpoint=mc_bert_base/bert_model.ckpt
